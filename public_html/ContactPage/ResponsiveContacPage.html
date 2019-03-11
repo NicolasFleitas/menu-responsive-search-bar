@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/estilosContacto.css" rel="stylesheet" type="text/css"/>
+         </head>
+    <body>
+         <header>
+            <h1 id="titulo" class="centrado">Empresa X</h1>            
+        </header>
+        
+        <nav id="menuprincipal" class="menutop">                
+            <a href="../">Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn">Productos 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-contenido">
+                    <a href="#">Producto1</a>
+                    <a href="#">Producto2</a>
+                    <a href="#">Producto3</a>
+                </div>
+            </div>
+            <a class="activo" href="../servicios.html">Servicios</a>
+            <a href="#">Nosotros</a>
+            <a class="activo" href="ContactPage/ResponsiveContacPage.html">Contáctenos</a>                    
+        </nav>   
+        
+        <div class="container">
+            <div style="text-align: left;">
+                <h2>Contáctenos</h2>
+                <p class="">Deje sus datos y nos pondremos en contacto con usted</p>                
+            </div>
+
+            <div class="row">
+                <div class="col-2 col-sm-12" style="background-color: #333; height: 300px;">
+                    <img alt="" src="">
+                </div>
+                <!--**** -->
+                <div class="col-10 col-sm-12">
+                    <form action="/action_page.php">
+                        <label for="fname">Nombre</label>
+                        <input class="contacto" type="text" id="fname" name="nombre" placeholder="Escriba su nombre">                        
+                        <!--****** -->
+                        <label for="lname">Apellido</label>
+                        <input class="contacto" type="text" id="lname" name="apellido" placeholder="Escriba su apellido">
+                        <!--****** -->
+                        <label for="country">Pais</label>
+                        <select id="country">
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Peru">Perú</option>
+                        </select>                        
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="textarea" style="height:170px;" placeholder="Escriba algo...">
+                        </textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div> <!-- fin fila -->        
+        </div> 
+    </body>
+</html>
+
