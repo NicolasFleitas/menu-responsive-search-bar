@@ -1,0 +1,119 @@
+* {box-sizing: border-box;}
+body {
+    margin:0;padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {        
+  overflow: hidden;
+  background-color: #fb852e;
+}
+    
+}
+h1#titulo {
+  font-size: 16px;
+}
+.izquierda { float: left;}
+.derecha {float: right; }            
+.centrado { text-align: center; }
+
+.menutop {
+    background-color: #333;                
+    overflow: hidden;                
+}
+
+.menutop a {
+    float: left;
+    font-size: 14px;
+    color: white;
+    padding: 14px 12px;
+    text-decoration: none;                
+}
+.menutop input[type="text"] {
+    float: right;
+    border: none;
+    font-size: 14px;
+    margin-top: 7px;
+    padding: 6px;
+    margin-right: 16px;              
+}              
+
+nav a:hover , .dropdown:hover .dropbtn:hover {
+    color: white;
+    background-color: #fb852e;
+}
+
+footer {
+    width: 100%;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0px;
+}
+
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 14px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 12px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-contenido {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;	
+}
+
+.dropdown-contenido a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-contenido a:hover {
+    background-color: #fb852e;
+}
+
+.dropdown:hover .dropdown-contenido {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .menutop a {
+        width: 100%;
+        text-align: left;
+    }
+    .dropdown {
+        width: 100%;
+        text-align: left;
+    }
+    #buscar {
+        display: block;
+        float:none;
+        width: 30%;
+        margin-left: 5px;
+    }
+    
+    .dropdown .dropdown-contenido {
+        float:none;
+        text-align: left;
+        width: 100%;
+        
+    }
+    
+}
+
