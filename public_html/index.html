@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Empresa</title>
         <meta charset="UTF-8">
@@ -50,8 +50,40 @@
                 background-color: #f1f1f1;
                 text-align: center;
             }
-            
+            #caja { width: 60%; float:right; border: 1px solid black; }
         </style>
+        <!--
+        <script>
+        function escribe() {
+         escribir = document.getElementById("caja");
+         miTitulo = "<h1>" + document.rellenar.titulo.value + "</h1>";
+         miClave = "<h3>" + document.rellenar.clave.value + "</h3>";
+         miTexto = "<p>" + document.rellenar.texto.value + "</p>";
+         escribir.innerHTML = miTitulo + miClave + miTexto;
+         };
+window.onload = function() {
+document.rellenar.ver.onclick = escribe;
+} ;
+        </script>
+        -->
+        <script>
+            function validarFormulario() {
+                var reg_nombre = document.forms["formregistro"]["reg_nombre"].value;
+                var reg_apellido = document.forms["formregistro"]["reg_apellido"].value;
+                var reg_email = document.forms["formregistro"]["reg_email"].value;
+                
+                if(reg_nombre === "") {
+                    alert("Nombre no puede estar vacio");
+                    return false;
+                } else if (reg_apellido === "") { 
+                    alert("Apellido no puede estar vacio");
+                    return false;
+                } else if (reg_email === "") {
+                    alert("Email no puede estar vacio");
+                    return false;
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -82,38 +114,60 @@
             </div>
 
             <div class="col-6">
-                <form>
+                <form name="formregistro" action="#" onsubmit="return validarFormulario()" method="post">
                     <div  class="contenedor inputform">
                         <p>Por favor rellene el formulario para crearse una cuenta</p>
                         <hr>
                         <label><b>Nombre</b></label>
-                        <input type="text" placeholder="Nombre">
+                        <input id="reg_nombre" name="reg_nombre" type="text" placeholder="Nombre">
 
                         <label><b>Apellido</b></label>
-                        <input type="text" placeholder="Apellido">
+                        <input id="reg_apellido"  name="reg_apellido" type="text" placeholder="Apellido">
 
                         <label><b>Correo electrónico</b></label>
-                        <input type="text" placeholder="email">
+                        <input id="reg_email" name="reg_email" type="text" placeholder="email">
 
-                        <label><b>Ingrese una contraseña</b></label>
-                        <input type="password" >
-                        <label><b>Ingrese de nuevo la contraseña</b></label>
-                        <input type="password" >
-                        <button type="submit" class="registrarsebtn">Registrarse</button>
+                        <label><b>Ingrese una contraseña</b></label>                        
+                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               required="" id="reg_password" 
+                               name="reg_password" 
+                               type="password" 
+                               title="Debe contener al menos un numero, una letra mayuscula, minuscula y 8 caracteres de longitud"> 
+                        
+                        <label><b>Ingrese de nuevo la contraseña</b></label>                        
+                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               required="" id="reg_passwordrepetir" 
+                               name="reg_passwordrepetir" 
+                               type="password" 
+                               title="Debe contener al menos un numero, una letra mayuscula, minuscula y 8 caracteres de longitud">  
+                        
+                        <button class="registrarsebtn">Registrarse</button>
                         <div class="contenedor ingresar">
                             <p>Ya tiene una cuenta? <a href="#">Ingresar</a>.</p>
                         </div>
                     </div>
                 </form>
-            </div>
-            
-        </div>        
+            </div>            
+        </div> 
+        <!-- 
+        <hr>
+        <form name="rellenar" action="#" >
+            <h2>Escribe tu texto:</h2>
+            <p> Escribe el título : <input name="titulo" type="text"/> </p> 
+            <p>Escribe tu clave: <input name="clave" type="password" /></p>
+            <p>Escribe el texto</p>
+            <p><textarea name="texto"></textarea></p>
+            <p><input name="ver" type="button" value="ver" />
+        </form>
         
         
-        
+       <div id="caja"></div>
+        <p><input name="ver" type="button" value="ver" />
+            -->
         <footer>
-            <p class="derecha">Webmaster: Nicolas Fleitas<br>0994494812<br>
+            <p class="izquierda">Webmaster: Nicolas Fleitas<br>0994494812<br>
                 <a href="mailto:nicofleitaspy">nicofleitaspy@gmail.com</a></p>
+            <div></div>
         </footer>
         
     </body>
