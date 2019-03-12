@@ -7,6 +7,51 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="#">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">              
+        <style>
+            .contenedor {
+                padding: 10px;
+                height: auto;;
+            }
+            .inputform [type=text], .inputform [type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;                
+            }
+            hr {
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+            }
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+            
+            .registrarsebtn {
+                background-color: green;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+            
+            .registrarsebtn:hover {
+                opacity: 1;
+            }
+            a {
+                color: dodgerblue;
+            }
+            .ingresar {
+                background-color: #f1f1f1;
+                text-align: center;
+            }
+            
+        </style>
     </head>
     <body>
         <header>
@@ -32,18 +77,39 @@
         </nav>    
         
         <div class="row">
-            <div class="col-12">
-                
+            <div class="col-6 izquierda">
+                <img src="img/map.jpg" alt="" style="max-width:100%;max-height:100%;">
+            </div>
+
+            <div class="col-6">
+                <form>
+                    <div  class="contenedor inputform">
+                        <p>Por favor rellene el formulario para crearse una cuenta</p>
+                        <hr>
+                        <label><b>Nombre</b></label>
+                        <input type="text" placeholder="Nombre">
+
+                        <label><b>Apellido</b></label>
+                        <input type="text" placeholder="Apellido">
+
+                        <label><b>Correo electrónico</b></label>
+                        <input type="text" placeholder="email">
+
+                        <label><b>Ingrese una contraseña</b></label>
+                        <input type="password" >
+                        <label><b>Ingrese de nuevo la contraseña</b></label>
+                        <input type="password" >
+                        <button type="submit" class="registrarsebtn">Registrarse</button>
+                        <div class="contenedor ingresar">
+                            <p>Ya tiene una cuenta? <a href="#">Ingresar</a>.</p>
+                        </div>
+                    </div>
+                </form>
             </div>
             
         </div>        
         
-        <div class="row">
-            <div class="col-12">
-             
-            </div>
-            
-        </div>
+        
         
         <footer>
             <p class="derecha">Webmaster: Nicolas Fleitas<br>0994494812<br>
